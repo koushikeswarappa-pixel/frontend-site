@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Touch</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 100px 40px;
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #000, #444);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .services {
+            background: #f5f5f5;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .about {
+            background: #fff;
+        }
+
+        .contact {
+            background: #222;
+            color: white;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: orange;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>CreativeTouch</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">OUR SERVICES</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <h1>We Build Creative Designs</h1>
+    <p>Your ideas, our execution</p>
+    <a href="#services" class="btn">Explore Services</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h1>About Us</h1>
+    <p>We are a creative company focused on design, interiors, and digital solutions.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+    <h1>Our Services</h1>
+
+    <div class="card">
+        <h2>Web Design</h2>
+        <p>Modern and responsive websites.</p>
+    </div>
+
+    <div class="card">
+        <h2>Interior Design</h2>
+        <p>Creative and elegant interiors.</p>
+    </div>
+
+    <div class="card">
+        <h2>Digital Marketing</h2>
+        <p>Grow your brand online.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h1>Contact Us</h1>
+    <p>Email: info@creativetouch.com</p>
+    <p>Phone: +91 9876543210</p>
+</section>
+
+</body>
+</html>
