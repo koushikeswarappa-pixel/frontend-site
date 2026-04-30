@@ -5,17 +5,10 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("Backend running 🚀");
-});
-
-app.get("/services", (req, res) => {
-    res.json([
-        { name: "Web Design" },
-        { name: "Interior Design" }
-    ]);
+  res.send("OK");
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log("Server running on port " + PORT);
+  console.log("Server running on " + PORT);
 });
