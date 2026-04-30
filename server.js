@@ -1,19 +1,24 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 app.use(cors());
 
-// ✅ root route (FIX)
+// ✅ Serve frontend files
+app.use(express.static(__dirname));
+
+// ✅ Default route → open index.html
 app.get("/", (req, res) => {
-    res.send("Backend is running 🚀");
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// example API
+// API
 app.get("/services", (req, res) => {
     res.json([
         { name: "Web Design" },
-        { name: "Interior Design" }
+        { name: "Interior Design" },
+        { name: "Digital Marketing" }
     ]);
 });
 
