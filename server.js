@@ -1,7 +1,23 @@
 const express = require("express");
-const app = express();
+const cors = require("cors");
 
-app.use(express.static(".")); // serve your HTML
+const app = express();
+app.use(cors());
+
+// ✅ root route (FIX)
+app.get("/", (req, res) => {
+    res.send("Backend is running 🚀");
+});
+
+// example API
+app.get("/services", (req, res) => {
+    res.json([
+        { name: "Web Design" },
+        { name: "Interior Design" }
+    ]);
+});
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Running"));
+app.listen(PORT, () => {
+    console.log("Server running on " + PORT);
+});
