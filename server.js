@@ -1,14 +1,12 @@
 const express = require("express");
-const cors = require("cors");
 const path = require("path");
 
 const app = express();
-app.use(cors());
 
-// ✅ Serve frontend files
+// ✅ serve static files
 app.use(express.static(__dirname));
 
-// ✅ Default route → open index.html
+// ✅ default route
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
